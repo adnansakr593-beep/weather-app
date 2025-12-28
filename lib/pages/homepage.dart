@@ -20,10 +20,10 @@ class Homepage extends StatelessWidget {
           if (state is WeatherLoading) {
             return Center(child: CircularProgressIndicator());
           } 
-          else if (state is WeatherSucss) {
+          else if (state is WeatherSuccess) {
 
             return ShowInfo(weather: BlocProvider.of<WeatherCubit>(context).weatherModel!);
-          } else if (state is Weatherfaliure) {
+          } else if (state is WeatherFailure) {
             return const Center(
               child: Text('Failed to get weather data. Try again.'),
             );
